@@ -1,0 +1,160 @@
+/* Základní proměnné pro komixový styl */
+:root {
+  --primary-color: #FF6F61;
+  /* Červená */
+  --secondary-color: #FFD700;
+  /* Žlutá */
+  --accent-color: #008CFF;
+  /* Modrá */
+  --text-color: #333;
+  /* Tmavě šedá/černá pro text */
+  --background-color: #FFFCE6;
+  /* Jemně žluté pozadí */
+  --border-color: black;
+  /* Komiksově černý obrys */
+  --font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+/* Obecné styly pro tělo */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Centrování obsahu */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Záhlaví */
+.site-header {
+  background-color: var(--primary-color);
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 5px solid var(--border-color);
+}
+
+.site-title {
+  font-family: 'Bangers', cursive;
+  color: white;
+  font-size: 3em;
+  text-shadow: 3px 3px 0 var(--border-color);
+  margin: 0;
+}
+
+
+
+/* Komiksový rámeček */
+.comic-frame {
+  border: 5px solid var(--border-color);
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+}
+
+.comic-frame h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 2.5em;
+  margin: 0;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px var(--border-color);
+}
+
+.comic-frame p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+/* Styl pro tlačítko v komiksovém rámečku */
+.button-comic {
+  background-color: var(--secondary-color);
+  color: var(--border-color);
+  border: 3px solid var(--border-color);
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.2s;
+}
+
+.button-comic:hover {
+  transform: translateY(-3px);
+  box-shadow: 7px 7px 0px var(--border-color);
+}
+
+/* Sekce O nás */
+.about-section {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 5px solid var(--border-color);
+}
+
+.about-section h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 2em;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px var(--border-color);
+}
+
+/* Sekce Kurzy */
+.courses-section {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 5px solid var(--border-color);
+}
+
+.courses-section h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 2em;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px var(--border-color);
+}
+
+.course {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 3px solid var(--border-color);
+  background-color: white;
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px var(--border-color);
+}
+
+/* Patka */
+.site-footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 5px solid var(--border-color);
+  margin-top: 20px;
+}
+
+.site-footer h3 {
+  font-family: 'Bangers', cursive;
+  font-size: 2em;
+  margin: 0;
+  text-shadow: 2px 2px var(--border-color);
+}
+
+.site-footer p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
