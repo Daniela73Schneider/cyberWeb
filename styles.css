@@ -27,6 +27,8 @@ body {
 
 /* Centrování obsahu */
 .container {
+  display: flex;
+  justify-content: center;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -49,12 +51,16 @@ body {
   margin: 0;
 }
 
-
+.intro-section {
+  display: flex;
+}
 
 /* Komiksový rámeček */
 .comic-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   border: 5px solid var(--border-color);
-  padding: 30px;
   margin-top: 20px;
   border-radius: 10px;
   background-color: var(--accent-color);
