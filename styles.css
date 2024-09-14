@@ -1,6 +1,6 @@
 /* Základní proměnné pro komixový styl */
 :root {
-  --primary-color: #FF6F61;
+  --primary-color: #e71a08;
   /* Červená */
   --secondary-color: #FFD700;
   /* Žlutá */
@@ -8,7 +8,7 @@
   /* Modrá */
   --text-color: #333;
   /* Tmavě šedá/černá pro text */
-  --background-color: #FFFCE6;
+  --background-color: #f2d813;
   /* Jemně žluté pozadí */
   --border-color: black;
   /* Komiksově černý obrys */
