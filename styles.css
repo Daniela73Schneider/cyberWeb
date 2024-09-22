@@ -15,29 +15,9 @@
   --font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }
 
-/* Obecné styly pro tělo */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-/* Centrování obsahu */
-.container {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* Záhlaví */
 .site-header {
-  background-color: var(--primary-color);
+  background-color: black;
   padding: 20px 0;
   text-align: center;
   border-bottom: 5px solid var(--border-color);
@@ -53,39 +33,28 @@ body {
 
 .intro-section {
   display: flex;
-}
-
-/* Komiksový rámeček */
-.comic-frame {
-  display: flex;
+  background-image: url("img/Rectangle\ 7yelBcgr.png");
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: stretch;
-  border: 5px solid var(--border-color);
-  margin-top: 20px;
-  border-radius: 10px;
-  background-color: var(--accent-color);
-  color: white;
-  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 
-.comic-frame h1 {
-  font-family: 'Bangers', cursive;
-  font-size: 2.5em;
+
+.whiteLine {
+  position: relative;
+  height: 20px;
   margin: 0;
-  color: var(--secondary-color);
-  text-shadow: 2px 2px var(--border-color);
-}
 
-.comic-frame p {
-  font-size: 1.2em;
-  margin: 20px 0;
+  /* Zajistí, že prostor mezi divy bude odpovídat borderu */
 }
 
 /* Styl pro tlačítko v komiksovém rámečku */
 .button-comic {
-  background-color: var(--secondary-color);
-  color: var(--border-color);
-  border: 3px solid var(--border-color);
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 48%;
   padding: 10px 20px;
   font-size: 1.5em;
   cursor: pointer;
@@ -117,6 +86,13 @@ body {
 }
 
 /* Sekce Kurzy */
+.Danca {
+  background-image: url("img/Group\ 3blueBgr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
 .courses-section {
   background-color: var(--accent-color);
   color: white;
@@ -145,22 +121,90 @@ body {
 
 /* Patka */
 .site-footer {
-  background-color: var(--primary-color);
+  background-color: black;
   color: white;
   padding: 20px 0;
   text-align: center;
-  border-top: 5px solid var(--border-color);
-  margin-top: 20px;
+  border-top: 5px solid black;
 }
 
 .site-footer h3 {
   font-family: 'Bangers', cursive;
   font-size: 2em;
   margin: 0;
-  text-shadow: 2px 2px var(--border-color);
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.167);
 }
 
 .site-footer p {
   margin: 10px 0 0;
   font-size: 1.2em;
+}
+
+#openModalBtn {
+
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 48%;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  max-width: 50%;
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.2s;
+}
+
+#openModalBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 7px 7px 0px var(--border-color);
+}
+
+
+/* Styl pro celý modal (skrytý, dokud není aktivován) */
+.modal {
+  display: none;
+  /* Skrývá modal okno */
+  position: fixed;
+  /* Udrží okno v popředí */
+  z-index: 1;
+  /* Zajistí, že bude okno nad obsahem stránky */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Pokryje celou šířku obrazovky */
+  height: 100%;
+  /* Pokryje celou výšku obrazovky */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Poloprůhledné pozadí */
+}
+
+/* Obsah modalu */
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  /* Odstup shora a automatické centrování */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Nastaví šířku okna */
+  max-width: 500px;
+  /* Max šířka pro větší obrazovky */
+  border-radius: 10px;
+  /* Zaoblené rohy */
+}
+
+/* Zavírací tlačítko (X) */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
