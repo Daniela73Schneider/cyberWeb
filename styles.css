@@ -31,42 +31,108 @@
   margin: 0;
 }
 
-.intro-section {
+/* navbar*/
+/* Základní styl pro navigaci */
+.navbar {
   display: flex;
-  background-image: url("img/Rectangle\ 7yelBcgr.png");
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
 }
 
+/* Styl pro samotný hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+}
+
+
+/* Skryté odkazy pro menší obrazovky */
+.nav-links {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Když je menu aktivní */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Styl pro větší obrazovky */
+@media (min-width: 601px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/*první usek stranky*/
+
+.intro-section {
+  position: relative;
+  display: flex;
+  background-image: url("img/Rectangle 7yelBcgr.png");
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  align-content: flex-end;
+  padding: 25vh 10vw;
+  justify-content: space-evenly;
+}
+
+.imgMartina {
+  position: absolute;
+  bottom: 0;
+  /* Dolní roh */
+  left: 0;
+  /* Levý roh */
+  width: 300px;
+  /* Velikost obrázku */
+  height: auto;
+}
 
 .whiteLine {
-  position: relative;
-  height: 20px;
-  margin: 0;
 
-  /* Zajistí, že prostor mezi divy bude odpovídat borderu */
+  width: max-content;
+
 }
 
-/* Styl pro tlačítko v komiksovém rámečku */
-.button-comic {
-  background-color: white;
-  color: black;
-  border: 3px solid black;
-  border-radius: 48%;
-  padding: 10px 20px;
-  font-size: 1.5em;
-  cursor: pointer;
-  text-transform: uppercase;
-  box-shadow: 4px 4px 0px var(--border-color);
-  transition: transform 0.2s;
-}
 
-.button-comic:hover {
-  transform: translateY(-3px);
-  box-shadow: 7px 7px 0px var(--border-color);
-}
 
 /* Sekce O nás */
 .about-section {
@@ -85,21 +151,76 @@
   text-shadow: 2px 2px var(--border-color);
 }
 
+.buttonAboutUs {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 48%;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.2s;
+  position: absolute;
+  bottom: 15px;
+  left: 200px;
+}
+
+.buttonAboutUs:hover {
+  transform: translateY(-3px);
+  box-shadow: 7px 7px 0px var(--border-color);
+}
+
 /* Sekce Kurzy */
 .Danca {
+  position: relative;
+  padding: 25vh;
   background-image: url("img/Group\ 3blueBgr.png");
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+}
+
+.imgDanca {
+  position: absolute;
+  bottom: 0;
+  /* Dolní roh */
+  left: 0;
+  /* Levý roh */
+  width: 300px;
+  /* Velikost obrázku */
+  height: auto;
+}
+
+/* Styl pro tlačítko v komiksovém rámečku */
+.buttonCourses {
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 48%;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.2s;
+  position: absolute;
+  bottom: 15px;
+  left: 200px;
+}
+
+.buttonCourses:hover {
+  transform: translateY(-3px);
+  box-shadow: 7px 7px 0px var(--border-color);
 }
 
 .courses-section {
-  background-color: var(--accent-color);
+  background-image: url("img/coursePAges.png");
   color: white;
   padding: 30px;
-  margin-top: 20px;
-  border-radius: 10px;
-  border: 5px solid var(--border-color);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 100vh;
 }
 
 .courses-section h2 {
@@ -145,6 +266,9 @@
   background-color: white;
   color: black;
   border: 3px solid black;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   border-radius: 48%;
   padding: 15px 30px;
   font-size: 1em;
@@ -181,15 +305,15 @@
 /* Obsah modalu */
 .modal-content {
   background-color: white;
-  margin: 15% auto;
-  /* Odstup shora a automatické centrování */
-  padding: 20px;
+  margin: 25% 25%;
+  padding: 49px;
   border: 1px solid #888;
-  width: 80%;
+  width: 60%;
   /* Nastaví šířku okna */
   max-width: 500px;
   /* Max šířka pro větší obrazovky */
   border-radius: 10px;
+  text-align: justify;
   /* Zaoblené rohy */
 }
 
