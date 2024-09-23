@@ -21,6 +21,7 @@
   padding: 20px 0;
   text-align: center;
   border-bottom: 5px solid var(--border-color);
+  width: 100%;
 }
 
 .site-title {
@@ -218,7 +219,7 @@
   color: white;
   padding: 30px;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 94%;
   background-size: cover;
   height: 100vh;
 }
@@ -238,6 +239,7 @@
   color: var(--text-color);
   border-radius: 10px;
   box-shadow: 4px 4px 0px var(--border-color);
+  width: 75%;
 }
 
 /* Patka */
