@@ -1,15 +1,5 @@
 /* Základní proměnné pro komixový styl */
 :root {
-  --primary-color: #e71a08;
-  /* Červená */
-  --secondary-color: #FFD700;
-  /* Žlutá */
-  --accent-color: #008CFF;
-  /* Modrá */
-  --text-color: #333;
-  /* Tmavě šedá/černá pro text */
-  --background-color: #f2d813;
-  /* Jemně žluté pozadí */
   --border-color: black;
   /* Komiksově černý obrys */
   --font-family: 'Comic Sans MS', 'Arial', sans-serif;
@@ -27,6 +17,7 @@
 .site-title {
   font-family: 'Bangers', cursive;
   color: white;
+  text-decoration: none;
   font-size: 3em;
   text-shadow: 3px 3px 0 var(--border-color);
   margin: 0;
@@ -79,6 +70,7 @@
 /* Když je menu aktivní */
 .nav-links.active {
   display: flex;
+  text-decoration: none;
   flex-direction: column;
   align-content: space-between;
   flex-wrap: wrap;
@@ -89,6 +81,7 @@
 @media (min-width: 601px) {
   .nav-links {
     display: flex;
+    text-decoration: none;
     flex-direction: row;
   }
 
@@ -137,19 +130,24 @@
 
 /* Sekce O nás */
 .about-section {
-  background-color: var(--primary-color);
-  color: white;
+  background-image: url("img/Rectangle\ 7yelBcgr.png");
+  color: rgb(0, 0, 0);
   padding: 30px;
   margin-top: 20px;
-  border-radius: 10px;
-  border: 5px solid var(--border-color);
+  border: 5px solid black;
 }
 
 .about-section h2 {
   font-family: 'Bangers', cursive;
   font-size: 2em;
-  color: var(--secondary-color);
-  text-shadow: 2px 2px var(--border-color);
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 2px rgb(112, 116, 112);
+}
+
+.aboutMartina {
+  background: linear-gradient(217deg, #5b8b30, rgba(90, 139, 48, 0.5) 70.71%);
+
 }
 
 .buttonAboutUs {
@@ -157,19 +155,19 @@
   color: black;
   border: 3px solid black;
   border-radius: 48%;
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 30px 60px;
+  font-size: 1.5em;
   cursor: pointer;
-  box-shadow: 4px 4px 0px var(--border-color);
+  box-shadow: 4px 4px 0px black;
   transition: transform 0.2s;
   position: absolute;
-  bottom: 15px;
+  bottom: 60px;
   left: 200px;
 }
 
 .buttonAboutUs:hover {
   transform: translateY(-3px);
-  box-shadow: 7px 7px 0px var(--border-color);
+  box-shadow: 7px 7px 0px black;
 }
 
 /* Sekce Kurzy */
@@ -199,46 +197,52 @@
   color: black;
   border: 3px solid black;
   border-radius: 48%;
-  padding: 10px 20px;
+  padding: 30px 60px;
   font-size: 1.5em;
   cursor: pointer;
-  box-shadow: 4px 4px 0px var(--border-color);
+  box-shadow: 4px 4px 0px black;
   transition: transform 0.2s;
   position: absolute;
-  bottom: 15px;
-  left: 200px;
+  bottom: 10px;
+  left: 220px;
 }
 
 .buttonCourses:hover {
   transform: translateY(-3px);
-  box-shadow: 7px 7px 0px var(--border-color);
+  box-shadow: 7px 7px 0px black;
 }
 
 .courses-section {
-  background-image: url("img/coursePAges.png");
+  background-image: url("img/Star\ 1star.png");
+  background-color: #407bfbcc;
+  background-size: 40%;
+  background-position: left bottom;
   color: white;
   padding: 30px;
   background-repeat: no-repeat;
-  width: 94%;
-  background-size: cover;
-  height: 100vh;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
 }
 
 .courses-section h2 {
   font-family: 'Bangers', cursive;
   font-size: 2em;
-  color: var(--secondary-color);
-  text-shadow: 2px 2px var(--border-color);
+  color: white;
+  text-shadow: 2px 2px black;
 }
 
 .course {
   margin-bottom: 20px;
   padding: 20px;
-  border: 3px solid var(--border-color);
-  background-color: white;
-  color: var(--text-color);
+  border: 3px solid black;
+  background:
+
+    linear-gradient(217deg, rgba(255, 0, 0, .8), rgb(255, 0, 0) 70.71%);
+  color: rgb(255, 255, 255);
   border-radius: 10px;
-  box-shadow: 4px 4px 0px var(--border-color);
+  box-shadow: 4px 4px 0px black;
   width: 75%;
 }
 
@@ -269,20 +273,20 @@
   color: black;
   border: 3px solid black;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 25px;
+  right: 25px;
   border-radius: 48%;
-  padding: 15px 30px;
-  font-size: 1em;
+  padding: 30px 60px;
+  font-size: 1.5em;
   cursor: pointer;
   max-width: 50%;
-  box-shadow: 4px 4px 0px var(--border-color);
+  box-shadow: 4px 4px 0px black;
   transition: transform 0.2s;
 }
 
 #openModalBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 7px 7px 0px var(--border-color);
+  box-shadow: 7px 7px 0px black;
 }
 
 
