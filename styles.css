@@ -5,6 +5,8 @@
   --font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }
 
+
+
 /* Záhlaví */
 .site-header {
   background-color: black;
@@ -337,4 +339,158 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Media Query pro telefony (šířka obrazovky do 480px) */
+@media (max-width: 480px) {
+
+  /* Záhlaví */
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .site-title {
+    font-size: 1.8em;
+  }
+
+  /* Navigační menu */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Sekce O nás */
+  .about-section {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .about-section h2 {
+    font-size: 1.2em;
+  }
+
+  .about-section p {
+    font-size: 0.9em;
+    line-height: 1.4em;
+  }
+
+  .aboutMartina {
+    padding: 15px;
+    background: linear-gradient(217deg, #5b8b30, rgba(90, 139, 48, 0.7) 70.71%);
+    text-align: center;
+  }
+
+  .Martina h1 {
+    font-size: 1.4em;
+  }
+
+  .Martina p {
+    font-size: 0.85em;
+    line-height: 1.5em;
+  }
+
+  /* Obrázky v mobilní verzi */
+  .imgMartina {
+    width: 150px;
+  }
+
+  /* Button */
+  .buttonAboutUs {
+    padding: 15px 30px;
+    font-size: 0.9em;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 85%;
+    padding: 20px;
+  }
+
+  #openModalBtn {
+    padding: 15px 30px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 700px) {
+
+  /* Záhlaví */
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .site-title {
+    font-size: 2em;
+  }
+
+  /* Navigační menu */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Sekce intro */
+  .intro-section {
+    padding: 15vh 5vw;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imgMartina {
+    width: 200px;
+  }
+
+  .buttonAboutUs {
+    padding: 20px 20px;
+    font-size: 1em;
+    bottom: 15px;
+    left: 150px;
+  }
+
+  /* Sekce o Martine */
+  .about-section {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5em;
+  }
+
+  .aboutMartina {
+    padding: 20px;
+  }
+
+  /* Sekce kurzů */
+  .Danca {
+    padding: 15vh 5vw;
+    text-align: center;
+  }
+
+  .imgDanca {
+    width: 200px;
+  }
+
+  .buttonCourses {
+    padding: 20px 20px;
+    font-size: 1em;
+    left: 150px;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 80%;
+    margin: 15% 10%;
+    padding: 20px;
+  }
 }
